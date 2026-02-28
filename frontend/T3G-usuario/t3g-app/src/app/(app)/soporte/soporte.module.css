@@ -1,0 +1,166 @@
+.page {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeIn 0.3s ease;
+}
+
+.header {}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 20px;
+    align-items: start;
+}
+
+/* Section header */
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.sectionIcon {
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan);
+}
+
+/* FAQ */
+.faqCard {
+    padding: 20px;
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.faqItem {
+    border-bottom: 1px solid var(--border);
+}
+
+.faqItem:last-child {
+    border-bottom: none;
+}
+
+.faqQuestion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    gap: 12px;
+    transition: color 0.2s;
+}
+
+.faqQuestion:hover {
+    color: var(--cyan);
+}
+
+.faqChevron {
+    color: var(--text-muted);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.faqChevron.open {
+    transform: rotate(180deg);
+    color: var(--cyan);
+}
+
+.faqAnswer {
+    padding: 0 0 14px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    animation: fadeIn 0.2s ease;
+}
+
+/* Right column */
+.rightCol {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Chat card */
+.chatCard {
+    padding: 20px;
+}
+
+.chatDesc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.chatHours {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Ticket */
+.ticketCard {
+    padding: 20px;
+}
+
+.ticketForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ticketForm label {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.successMsg {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: var(--green);
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

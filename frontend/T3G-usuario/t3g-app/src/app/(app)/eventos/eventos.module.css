@@ -1,0 +1,174 @@
+.page {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.total {
+    font-size: 13px;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Filters */
+.filters {
+    padding: 16px 20px;
+}
+
+.filtersTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.filtersRow {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filterField {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filterField label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Table */
+.tableWrap {
+    overflow-x: auto;
+    padding: 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.table thead tr {
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.row {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.row:hover {
+    background: var(--bg-secondary);
+}
+
+.row td {
+    padding: 14px 16px;
+    vertical-align: middle;
+}
+
+/* Type badge */
+.typeBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.typeAlert {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--orange);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.typeSystem {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--green);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.typeInfo {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--blue-light);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.desc {
+    color: var(--text-primary);
+    font-weight: 500;
+    max-width: 280px;
+}
+
+.device {
+    color: var(--text-secondary);
+}
+
+.time {
+    color: var(--text-primary);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.recordingBtn {
+    display: inline-flex;
+    gap: 6px;
+    color: var(--cyan);
+    border-color: rgba(0, 212, 255, 0.3);
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.recordingBtn:hover {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--cyan);
+}
+
+.empty {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-muted);
+}

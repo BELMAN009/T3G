@@ -1,0 +1,235 @@
+.page {
+    padding: 28px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.headerActions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Content grid */
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Cameras */
+.camerasSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mainCamera {
+    min-height: 0;
+}
+
+.secondaryGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* Side panel */
+.sidePanel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Status card */
+.statusCard {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.statusHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statusLabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.iconArmed {
+    color: var(--green);
+}
+
+.iconDisarmed {
+    color: var(--text-muted);
+}
+
+.iconAlert {
+    color: var(--orange);
+}
+
+.iconSystem {
+    color: var(--green);
+}
+
+.iconInfo {
+    color: var(--blue-light);
+}
+
+.statusRow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.statusKey {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.armed {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.disarmed {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.devCount {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.devLabel {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* Alerts card */
+.alertsCard {
+    padding: 16px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.alertsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.alertsBadge {
+    background: var(--red);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+}
+
+.alertsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alertItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.alertIconWrap {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alertTypeAlert {
+    background: rgba(245, 158, 11, 0.15);
+}
+
+.alertTypeSystem {
+    background: rgba(16, 185, 129, 0.15);
+}
+
+.alertTypeInfo {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.alertBody {
+    flex: 1;
+    min-width: 0;
+}
+
+.alertMsg {
+    font-size: 12px;
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.alertMeta {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+@media (max-width: 1100px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidePanel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

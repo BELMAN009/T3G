@@ -1,0 +1,200 @@
+.page {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeIn 0.3s ease;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+/* Device card */
+.deviceCard {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.2s;
+}
+
+.deviceCard:hover {
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconWrap {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(37, 99, 235, 0.1));
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deviceTypeIcon {
+    color: var(--cyan);
+}
+
+.menuBtn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+}
+
+.menuBtn:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 34px;
+    background: var(--bg-card-hover);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 4px;
+    z-index: 50;
+    min-width: 130px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.15s ease;
+}
+
+.dropItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: inherit;
+    transition: all 0.15s;
+}
+
+.dropItem:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.dropDanger {
+    color: var(--red) !important;
+}
+
+.dropDanger:hover {
+    background: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Card body */
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.deviceName {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.deviceLocation {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.deviceMeta {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* Footer */
+.cardFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.statusOnline {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--green);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.statusOffline {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--red);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.statusWarning {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--orange);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.streamBtn {
+    justify-content: center;
+    width: 100%;
+    font-size: 13px;
+}

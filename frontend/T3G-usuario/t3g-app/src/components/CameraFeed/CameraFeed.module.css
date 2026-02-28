@@ -1,0 +1,227 @@
+.feed {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.feed:hover {
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.feed.large {
+    border-color: var(--border-light);
+}
+
+.feed.online {
+    /* nothing extra needed */
+}
+
+.feed.offline {
+    opacity: 0.7;
+}
+
+/* Feed area */
+.feedArea {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #070c18;
+    overflow: hidden;
+}
+
+.large .feedArea {
+    /* Larger feeds keep aspect ratio */
+}
+
+/* Camera placeholder */
+.cameraPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(ellipse at center, #0d1a2e 0%, #070c18 70%);
+}
+
+/* Scan line */
+.scanLine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent);
+    animation: scan-line 4s linear infinite;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Grid overlay effect */
+.gridOverlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+/* Camera icon */
+.cameraIcon {
+    color: var(--cyan);
+    width: 60px;
+    height: 40px;
+    opacity: 0.3;
+}
+
+/* Corner brackets */
+.corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: rgba(0, 212, 255, 0.5);
+    border-style: solid;
+    border-width: 0;
+}
+
+.topLeft {
+    top: 8px;
+    left: 8px;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 2px;
+}
+
+.topRight {
+    top: 8px;
+    right: 8px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-top-right-radius: 2px;
+}
+
+.bottomLeft {
+    bottom: 8px;
+    left: 8px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.bottomRight {
+    bottom: 8px;
+    right: 8px;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+/* LIVE badge */
+.liveBadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(239, 68, 68, 0.9);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    z-index: 3;
+}
+
+.liveDot {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: live-blink 1.5s ease infinite;
+}
+
+/* Timestamp */
+.timestamp {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: monospace;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2px 6px;
+    border-radius: 3px;
+    z-index: 3;
+}
+
+/* Offline state */
+.offlineState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* Hover overlay */
+.hoverOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    animation: fadeIn 0.2s ease;
+}
+
+.hoverBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 212, 255, 0.2);
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* Info row */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+}
+
+.cameraName {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cameraSubtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-muted);
+}
+
+.statusDot[data-online="true"] {
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+}
